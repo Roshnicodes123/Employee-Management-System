@@ -34,6 +34,14 @@ def show
   @employee = Employee.find(params[:id])
 end
 
+def destroy
+  @employee =  Employee.find(params[:id])
+  if @employee.destroy
+    redirect_to employees_path, notice: 'Employee has been deleted successfully'
+  end
+end
+
+
 
 
 private
