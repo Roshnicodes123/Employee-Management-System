@@ -30,6 +30,10 @@ def update
 
 end
 
+def show
+  @employee = Employee.find(params[:id])
+end
+
 
 
 private
